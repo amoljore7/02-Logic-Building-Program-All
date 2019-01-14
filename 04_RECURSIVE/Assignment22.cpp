@@ -1,0 +1,75 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// 22.Write a program which accept n numbers from user and print maximum
+// number from that numbers in recursive manner.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+//Function Protptype
+int PrintMax(int);
+
+int main()
+{
+	//declaring integer
+	int iNum=0;
+
+	printf("\nEnter Number of N => ");
+	scanf("%d",&iNum);
+
+	printf("\nEnter %d Number => \n",iNum);
+
+	// Function call
+	iNum=PrintMax(iNum);
+	
+	printf("\nMaximum Number is => %d",iNum);
+
+	printf("\n");
+	return 0;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Function Name	:		PrintMax
+//
+//		Input			:		Integer
+//
+//		Returns			:		Integer
+//
+//		Description		:		Accept N number and print Maximum number using recursion.
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int PrintMax(int iNo)
+{
+	static int iMax=0;
+	int iNum=0;
+	if(iNo > 0)
+	{
+		scanf("%d",&iNum);
+		if(iNum > iMax)
+		{
+			iMax=iNum;
+		}
+		iNo--;
+		PrintMax(iNo);
+	}
+	return iMax;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//			Input		:	Enter Number of N => 7
+//
+//							Enter 7 Number =>
+//							0
+//							4
+//							5
+//							8
+//							-1
+//							4
+//							6
+//
+//		Output			:	Maximum Number is => 8
+//
+////////////////////////////////////////////////////////////////////////////////////////////
