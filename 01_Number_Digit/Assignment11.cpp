@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//		11.Write a program which accept N from user and print first 5 multiples of N.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//		Function Name:		PrintFiveMultOfNum
+//
+//		Input		 :		integer
+//
+//		Returns		 :		void
+//
+//		Description	 :		This function accepts integer number and print the
+//							first 5 multiples of N.
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+void PrintFiveMultOfNum(
+					int N	//value of N
+				 )
+{
+	//local variable
+	register int i;
+
+	printf("\n First five multiples of %d is => :",N);
+	for(i=1;i<=5;i++)
+	{
+		printf("%d\t",i*N);
+	}
+}	
+
+int main()
+{
+	//local variable
+	int N=0;
+
+	//accept number from user
+	printf("\n Enter value of N => ");
+	scanf("%d",&N);
+
+	//call to fuction 
+	PrintFiveMultOfNum(N);
+
+	return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//		Input		: Enter value of N => 4
+//
+//		Output		: First five multiples of %d is => :4 8 12 16 20
+//
+/////////////////////////////////////////////////////////////////////////////////

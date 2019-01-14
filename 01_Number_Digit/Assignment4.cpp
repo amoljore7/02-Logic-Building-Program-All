@@ -1,0 +1,51 @@
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//		4.Write a program which accept two numbers and print its addition.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+
+//function prototype
+void AdditionOfTwoNum(int,int);
+
+int main()
+{
+	int iNumber1=0,iNumber2=0;
+
+	printf("\n Enter the two numbers => ");
+	scanf("%d %d",&iNumber1,&iNumber2);
+
+	AdditionOfTwoNum(iNumber1,iNumber2);
+
+	return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+//
+//		Function Name:		AdditionOfTwoNum
+//
+//		Input		 :		integer,integer
+//
+//		Returns		 :		void
+//
+//		Description	 :		This function accepts two integer number and print the
+//							addition of these two numbers.
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+void AdditionOfTwoNum(
+						int iNumber1,		//first number
+						int iNumber2		//second number
+					 )
+{
+
+	printf("\n Addition of two numbers is => %d",iNumber1+iNumber2);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Input		: Enter the two numbers => 4 5
+//
+//		Output		: Addition of two numbers is => 9
+//
+////////////////////////////////////////////////////////////////////////////////////////
